@@ -1,2 +1,2 @@
 ---
-vagrant_diskdir: /tmp/vagrant_diskdir
+vagrant_diskdir: ../tmp/vagrant_diskdir
