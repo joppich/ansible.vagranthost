@@ -22,7 +22,7 @@ Vagrant.configure(2) do |config|
         end
         
         v.vm.network "private_network", type: "dhcp"
-        v.vm.network :forwarded_port, guest: {{ vagrant_network.guestport }}, host: {{ vagrant_netwokr.hostport }}
+        v.vm.network :forwarded_port, guest: {{ vagrant_network.guestport }}, host: {{ vagrant_network.hostport }}
         # See https://github.com/mitchellh/vagrant/issues/5005
         v.vm.ssh.insert_key = false
 
