@@ -1,2 +1,8 @@
 ---
 vagrant_diskdir: ../tmp/vagrant_diskdir
+vagrant_disksize: 2 * 1024
+vagrant_memory: 2048
+vagrant_cpus: 2
+vagrant_network:
+    guestport: 80
+    hostport: 8080
