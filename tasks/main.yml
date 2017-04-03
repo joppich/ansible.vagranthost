@@ -5,7 +5,7 @@
   package:
       name: "{{ item.name }}"
       state: latest
-  with_items: {{ packages }}
+  with_items: "{{ packages }}"
 
 - name: Load Kernelmodules
   modprobe:
@@ -14,7 +14,7 @@
 
 - name: Ensure existence of vagrant diskfile directory
   file:
-      path: {{ vagrant_diskdir }}
+      path: "{{ vagrant_diskdir }}"
       state: directory
       mode: 750
 
