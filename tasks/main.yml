@@ -1,0 +1,24 @@
+---
+# Perform all neccessary setup tasks
+
+- name: Install required packages
+  package:
+      name: "{{ item.name }}"
+      state: latest
+  with_items: {{ packages }}
+
+- name: Load Kernelmodules
+  modprobe:
+      name: vboxdrv
+      state: present
+
+- name: Ensure existence of vagrant diskfile directory
+  file:
+      path: {{ vagrant_diskdir }}
+      state: directory
+      mode: 750
+
+- name: Generate Vagranfile from template
+  template:
+      src: vagrantfile.jinja2
+      dest: ./Vagrantfile
