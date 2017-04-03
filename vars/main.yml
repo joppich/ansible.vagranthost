@@ -1,4 +1,4 @@
 ---
-- packages:
-    virtualbox
-    vagrant
+packages:
+    - virtualbox
+    - vagrant
