@@ -1,6 +1,6 @@
 ---
 vagrant_diskdir: ../tmp/vagrant_diskdir
-vagrant_disksize: 2048
+vagrant_disksize: 1000*2048
 vagrant_memory: 2048
 vagrant_cpus: 2
 vagrant_network:
