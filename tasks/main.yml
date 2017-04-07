@@ -16,7 +16,7 @@
   file:
       path: "{{ vagrant_diskdir }}"
       state: directory
-      mode: 0755
+      mode: 0770
 
 - name: Generate Vagranfile from template
   template:
