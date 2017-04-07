@@ -1,10 +1,6 @@
 ---
 # Perform all neccessary setup tasks
 
-- name: get the username running the deploy
-  local_action: command whoami
-  register: deploying_user
-
 - name: Install required packages
   package:
       name: "{{ item }}"
