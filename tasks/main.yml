@@ -1,6 +1,10 @@
 ---
 # Perform all neccessary setup tasks
 
+- name: get the username running the deploy
+  local_action: command whoami
+  register: deploying_user
+
 - name: Install required packages
   package:
       name: "{{ item }}"
@@ -16,9 +20,12 @@
   file:
       path: "{{ vagrant_diskdir }}"
       state: directory
-      mode: 0770
+      owner: '{{ deploying_user }}'
+      mode: 0700
 
 - name: Generate Vagranfile from template
   template:
       src: vagrantfile.jinja2
       dest: ./Vagrantfile
+      owner: '{{ deploying_user }}'
+      mode: 0700
