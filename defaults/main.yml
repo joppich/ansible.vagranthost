@@ -1,4 +1,5 @@
 ---
+vagrant_hostname: hal9001
 vagrant_diskdir: ../tmp/vagrant_diskdir
 vagrant_disksize: 2048
 vagrant_memory: 2048
