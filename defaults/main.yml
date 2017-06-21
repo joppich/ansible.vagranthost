@@ -2,7 +2,7 @@
 extra_disk: false
 
 vagrant_hostname: hal9001
-vagrant_os_distro: ubuntu/xenial64
+vagrant_os_distro: geerlingguy/ubuntu1604
 vagrant_diskdir: ../tmp/vagrant_diskdir
 vagrant_diskname: hal9001_ext_drv.vdi
 vagrant_disksize: 2048
