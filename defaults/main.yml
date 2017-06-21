@@ -1,6 +1,8 @@
 ---
 vagrant_hostname: hal9001
+vagrant_os_distro: ubuntu/xenial64
 vagrant_diskdir: ../tmp/vagrant_diskdir
+vagrant_diskname: hal9001_ext_drv.vdi
 vagrant_disksize: 2048
 vagrant_memory: 2048
 vagrant_cpus: 2

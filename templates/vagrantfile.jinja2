@@ -5,13 +5,13 @@
 # Any changes should be made in the vagrantfile.jinja2-template
 # found in the setup role.
 
-disk0 = '{{ vagrant_diskdir }}/dockerdisk.vdi'
+disk0 = '{{ vagrant_diskdir }}/{{ vagrant_diskname }}'
 
 Vagrant.require_version ">=1.7.0"
 
 Vagrant.configure(2) do |config|
     config.vm.define "{{ vagrant_hostname}}" do |v|
-        v.vm.box = "debian/jessie64" 
+        v.vm.box = "{{ vagrant_os_distro }}" 
         v.vm.provider :virtualbox do |vb|
             unless File.exist?(disk0)
                 vb.customize ['createhd','--filename', disk0, '--size', {{ vagrant_disksize }}]
