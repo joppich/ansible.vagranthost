@@ -18,6 +18,8 @@
       state: directory
       owner: '{{ deploying_user }}'
       mode: 0700
+  when:
+      extra_disk
 
 - name: Generate Vagranfile from template
   template:

@@ -1,4 +1,6 @@
 ---
+extra_disk: false
+
 vagrant_hostname: hal9001
 vagrant_os_distro: ubuntu/xenial64
 vagrant_diskdir: ../tmp/vagrant_diskdir
