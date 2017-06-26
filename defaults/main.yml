@@ -1,5 +1,6 @@
 ---
 extra_disk: false
+vault_pw_required: false
 
 vagrant_hostname: hal9001
 vagrant_os_distro: geerlingguy/ubuntu1604
